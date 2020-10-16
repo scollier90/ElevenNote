@@ -1,0 +1,16 @@
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\bin\Debug\ElevenNote.Models.dll.config
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\bin\Debug\ElevenNote.Models.dll
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\bin\Debug\ElevenNote.Models.pdb
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\bin\Debug\EntityFramework.dll
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\bin\Debug\EntityFramework.xml
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\obj\Debug\ElevenNote.Models.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\obj\Debug\ElevenNote.Models.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\obj\Debug\ElevenNote.Models.csproj.CopyComplete
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\obj\Debug\ElevenNote.Models.dll
+C:\ElevenFiftyProjects\Web APIs\Eleven Note (N Tier)\ElevenNote\ElevenNote.Models\obj\Debug\ElevenNote.Models.pdb
