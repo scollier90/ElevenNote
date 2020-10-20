@@ -3,51 +3,50 @@ using ElevenNote.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElevenNote.Services
+namespace ElevenCategory.Services
 {
-    public class NoteService
+    public class CategoryService
     {
         private readonly Guid _userID;
-        public NoteService(Guid userID)
+        public CategoryService(Guid userID)
         {
             _userID = userID;
         }
 
-        public bool CreateNote(NoteCreate model)
+        public bool CreateCategory(CategoryCreate model)
         {
             var entity =
-                new Note()
+                new Category()
                 {
                     OwnerID = _userID,
-                    Title = model.Title,
-                    Content = model.Content,
+                    Name = model.Name,
+                    Description = model.Description,
                     CreatedUtc = DateTimeOffset.Now
                 };
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Notes.Add(entity);
+                ctx.Categories.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public IEnumerable<NoteListItem> GetNotes()
+        public IEnumerable<CategoryListItem> GetCategories()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                        .Notes
+                        .Categories
                         .Where(e => e.OwnerID == _userID)
                         .Select(
                             e =>
-                                new NoteListItem
+                                new CategoryListItem
                                 {
-                                    NoteID = e.NoteID,
-                                    Title = e.Title,
+                                    CategoryID = e.CategoryID,
+                                    Name = e.Name,
                                     CreatedUtc = e.CreatedUtc
                                 }
                         );
@@ -55,53 +54,53 @@ namespace ElevenNote.Services
             }
         }
 
-        public NoteDetail GetNoteByID(int id)
+        public CategoryDetail GetCategoryByID(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Notes
-                        .Single(e => e.NoteID == id && e.OwnerID == _userID);
+                        .Categories
+                        .Single(e => e.CategoryID == id && e.OwnerID == _userID);
                 return
-                    new NoteDetail
+                    new CategoryDetail
                     {
-                        NoteID = entity.NoteID,
-                        Title = entity.Title,
-                        Content = entity.Content,
+                        CategoryID = entity.CategoryID,
+                        Name = entity.Name,
+                        Description = entity.Description,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
             }
         }
 
-        public bool UpdateNote(NoteEdit model)
+        public bool UpdateCategory(CategoryEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Notes
-                        .Single(e => e.NoteID == model.NoteID && e.OwnerID == _userID);
+                        .Categories
+                        .Single(e => e.CategoryID == model.CategoryID && e.OwnerID == _userID);
 
-                entity.Title = model.Title;
-                entity.Content = model.Content;
+                entity.Name = model.Name;
+                entity.Description = model.Description;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public bool DeleteNote(int noteID)
+        public bool DeleteCategory(int CategoryID)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Notes
-                        .Single(e => e.NoteID == noteID && e.OwnerID == _userID);
+                        .Categories
+                        .Single(e => e.CategoryID == CategoryID && e.OwnerID == _userID);
 
-                ctx.Notes.Remove(entity);
+                ctx.Categories.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }
